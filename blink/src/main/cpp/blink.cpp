@@ -25,8 +25,8 @@
 
 #include "AndroidSystemProperties.h"
 
-const int BLINK_INTERVAL_MS = 1000;
 const char* TAG = "blink";
+const int BLINK_INTERVAL_MS = 1000;
 
 #define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, TAG, __VA_ARGS__)
 #define LOGW(...) __android_log_print(ANDROID_LOG_WARN, TAG, __VA_ARGS__)
@@ -56,11 +56,11 @@ void android_main(android_app* app) {
 
     while (!app->destroyRequested) {
         int gpioValue;
-        if (AGpio_getValue(gpio, &gpioValue) < 0) {
+        if (AGpio_getValue(gpio, &gpioValue) != 0) {
             LOGE("failed to get value for GPIO: %s", LED_GPIO);
             continue; // retry immediately
         }
-        if (AGpio_setValue(gpio, !gpioValue) < 0) {
+        if (AGpio_setValue(gpio, !gpioValue) != 0) {
             LOGE("failed to set value for GPIO: %s", LED_GPIO);
             continue; // retry immediately
         }
