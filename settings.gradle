@@ -1,2 +1,1 @@
-include ':blink', ':button'
-
+include ':blink', ':button', ':speaker'
