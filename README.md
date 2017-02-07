@@ -59,10 +59,38 @@ Blink
 
 ```bash
     ./gradlew blink:installDebug
-    adb shell am start com.example.androidthings.simplepio/.BlinkActivity
+    adb shell am start com.example.androidthings.nativepio/android.app.NativeActivity
 ```
 
 Blinks an LED connected to a GPIO pin.
+
+Button
+------
+
+![Schematics for Intel Edison](button/edison_schematics.png)
+![Schematics for Raspberry Pi 3](button/rpi3_schematics.png)
+
+```bash
+    ./gradlew button:installDebug
+    adb shell am start com.example.androidthings.nativepio/android.app.NativeActivity
+```
+
+Logs to logcat when a button connected to a GPIO pin is pressed. Make sure you
+use a pull-down or pull-up resistor to avoid fluctuation.
+
+Speaker
+-------
+
+![Schematics for Intel Edison](speaker/edison_schematics.png)
+![Schematics for Raspberry Pi 3](speaker/rpi3_schematics.png)
+
+```bash
+    ./gradlew speaker:installDebug
+    adb shell am start com.example.androidthings.nativepio/android.app.NativeActivity
+```
+
+Plays an annoying alarm sound on the PWM speaker. Stop it by turning off the
+Raspberry Pi.
 
 License
 =======
