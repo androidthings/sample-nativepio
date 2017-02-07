@@ -41,6 +41,8 @@ void android_main(android_app* app) {
     const char* LED_GPIO;
     if (systemProperties.getBuildDevice() == "rpi3") {
         LED_GPIO = "BCM6";
+    } else if (systemProperties.getBuildDevice() == "edison") {
+        LED_GPIO = "IO13";
     } else {
         LOGE("unsupported device: %s", systemProperties.getBuildDevice().c_str());
         return;
