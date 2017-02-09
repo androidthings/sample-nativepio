@@ -31,7 +31,7 @@ android {
         }
         externalNativeBuild {
             cmake {
-                arguments "-DLIBANDROIDTHINGS_DIR=${rootProject.projectDir}/libandroidthings"
+                arguments "-DPROJECT_DIR=${rootProject.projectDir}"
             }
         }
     }

@@ -4,17 +4,12 @@ Simple example of Android Things Native Peripheral I/O APIs
 This Android Things app runs basic code that exercises the Native PIO APIs from
 C++. Each sample is an Android module that can be run independently.
 
-**IMPORTANT**: Please, note that these samples are not necessarily the easiest way to accomplish
-a task. In particular, they handle all low level I/O protocols directly, on
-purpose to showcase how to use the Peripheral APIs. In real world applications,
-you should use or develop a suitable driver that encapsulates the manipulation
-of low level APIs.
-
 Pre-requisites
 --------------
 
 - Android Things compatible board
 - Android Studio 2.2+
+- Android NDK bundle
 
 For the Blink sample:
 - 1 LED
@@ -22,10 +17,21 @@ For the Blink sample:
 - 2 jumper wires
 - 1 breadboard
 
+For the Button sample:
+- 1 push button
+- 1 resistor
+- 2 jumper wires
+- 1 breadboard
+
+For the Speaker sample:
+- 1 piezo buzzer
+- 2 jumper wires
+- 1 breadboard
+
 Build and install
 =================
 
-[Download](https://developer.android.com/things/preview/download.html) the Android Things native library and extract it in the project root directory.
+[Download](https://github.com/androidthings/native-libandroidthings/releases) the latest Android Things native library release and extract it in the project root directory.
 
 It should contains the following directories:
 ```
