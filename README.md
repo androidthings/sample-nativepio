@@ -51,7 +51,7 @@ If you prefer to run on the command line, type
 
 ```bash
 ./gradlew <module>:installDebug
-adb shell am start com.example.androidthings.simplepio/.<ModuleActivity>
+adb shell am start com.example.androidthings.nativepio/.<ModuleActivity>
 ```
 
 Sample Specifics
