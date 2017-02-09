@@ -1,8 +1,9 @@
 Simple example of Android Things Native Peripheral I/O APIs
 ===========================================================
 
-This Android Things app runs basic code that exercises the Native PIO APIs from
-C++. Each sample is an Android module that can be run independently.
+This Android Things app runs basic code that exercises
+the [Native PIO APIs][native-pio] from C++. Each sample is an Android
+module that can be run independently.
 
 Pre-requisites
 --------------
@@ -31,7 +32,8 @@ For the Speaker sample:
 Build and install
 =================
 
-[Download](https://github.com/androidthings/native-libandroidthings/releases) the latest Android Things native library release and extract it in the project root directory.
+[Download][releases] the latest Android Things native library release
+and extract it in the project root directory.
 
 It should contains the following directories:
 ```
@@ -117,3 +119,6 @@ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
 License for the specific language governing permissions and limitations under
 the License.
+
+[native-pio]: https://developer.android.com/things/sdk/pio/native.html
+[releases]: https://github.com/androidthings/native-libandroidthings/releases
