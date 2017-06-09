@@ -43,7 +43,9 @@ void android_main(android_app* app) {
         BUTTON_GPIO = "BCM21";
     } else if (systemProperties.getBuildDevice() == "edison") {
         BUTTON_GPIO = "IO12";
-    } else {
+    } else if (systemProperties.getBuildDevice() == "imx7d_pico") {
+        BUTTON_GPIO = "GPIO_174";
+    }  else {
         LOGE("unsupported device: %s", systemProperties.getBuildDevice().c_str());
         return;
     }
@@ -79,7 +81,7 @@ void android_main(android_app* app) {
             if (pollResult == LOOPER_ID_USER) {
                 int ackInterruptResult = AGpio_ackInterruptEvent(fd);
                 ASSERT(ackInterruptResult == 0, "failed to ack interrupt");
-                LOGI(TAG, "GPIO changed: button pressed");
+                LOGI("GPIO \"%s\" changed: button pressed", BUTTON_GPIO);
             }
         }
     }

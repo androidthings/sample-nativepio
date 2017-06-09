@@ -51,6 +51,8 @@ void android_main(android_app* app) {
         SPEAKER_PWM = "PWM1";
     } else if (systemProperties.getBuildDevice() == "edison") {
         SPEAKER_PWM = "IO3";
+    } else if (systemProperties.getBuildDevice() == "imx7d_pico") {
+        SPEAKER_PWM = "PWM2";
     } else {
         LOGE("unsupported device: %s", systemProperties.getBuildDevice().c_str());
         return;
