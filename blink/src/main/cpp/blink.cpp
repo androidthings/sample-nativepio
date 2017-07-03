@@ -53,10 +53,10 @@ void android_main(android_app* app) {
     APeripheralManagerClient* client = APeripheralManagerClient_new();
     ASSERT(client, "failed to open peripheral manager client");
     AGpio* gpio;
-    APeripheralManagerClient_openGpio(client, LED_GPIO, &gpio);
-    ASSERT(gpio, "failed to open GPIO: %s", LED_GPIO);
-    int result = AGpio_setDirection(gpio, AGPIO_DIRECTION_OUT_INITIALLY_LOW);
-    ASSERT(result == 0, "failed to set direction for GPIO: %s", LED_GPIO);
+    int openResult = APeripheralManagerClient_openGpio(client, LED_GPIO, &gpio);
+    ASSERT(openResult == 0, "failed to open GPIO: %s", LED_GPIO);
+    int setDirectionResult = AGpio_setDirection(gpio, AGPIO_DIRECTION_OUT_INITIALLY_LOW);
+    ASSERT(setDirectionResult == 0, "failed to set direction for GPIO: %s", LED_GPIO);
 
     while (!app->destroyRequested) {
         int gpioValue;

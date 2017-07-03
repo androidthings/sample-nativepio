@@ -53,8 +53,8 @@ void android_main(android_app* app) {
     APeripheralManagerClient* client = APeripheralManagerClient_new();
     ASSERT(client, "failed to open peripheral manager client");
     AGpio* gpio;
-    APeripheralManagerClient_openGpio(client, BUTTON_GPIO, &gpio);
-    ASSERT(gpio, "failed to open GPIO: %s", BUTTON_GPIO);
+    int openResult = APeripheralManagerClient_openGpio(client, BUTTON_GPIO, &gpio);
+    ASSERT(openResult == 0, "failed to open GPIO: %s", BUTTON_GPIO);
     int setDirectionResult = AGpio_setDirection(gpio, AGPIO_DIRECTION_IN);
     ASSERT(setDirectionResult == 0, "failed to set direction for GPIO: %s", BUTTON_GPIO);
     int setEdgeTriggerResult = AGpio_setEdgeTriggerType(gpio, AGPIO_EDGE_FALLING);

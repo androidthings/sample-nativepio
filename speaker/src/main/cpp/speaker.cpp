@@ -61,8 +61,8 @@ void android_main(android_app* app) {
     APeripheralManagerClient* client = APeripheralManagerClient_new();
     ASSERT(client, "failed to open peripheral manager client");
     APwm* pwm;
-    APeripheralManagerClient_openPwm(client, SPEAKER_PWM, &pwm);
-    ASSERT(pwm, "failed to open PWM: %s", SPEAKER_PWM);
+    int openResult = APeripheralManagerClient_openPwm(client, SPEAKER_PWM, &pwm);
+    ASSERT(openResult == 0, "failed to open PWM: %s", SPEAKER_PWM);
     int setDutyCycleResult = APwm_setDutyCycle(pwm, 50.0);
     ASSERT(setDutyCycleResult == 0, "failed to set PWM duty cycle: %s", SPEAKER_PWM);
     int enablePwmResult = APwm_setEnabled(pwm, 1);
