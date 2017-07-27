@@ -1,12 +1,10 @@
-Simple example of Android Things Native Peripheral I/O APIs
-===========================================================
+# Simple example of Android Things Native Peripheral I/O APIs
 
 This Android Things app runs basic code that exercises
 the [Native PIO APIs][native-pio] from C++. Each sample is an Android
 module that can be run independently.
 
-Pre-requisites
---------------
+## Pre-requisites
 
 - Android Things compatible board
 - Android Studio 2.2+
@@ -29,8 +27,7 @@ For the Speaker sample:
 - 2 jumper wires
 - 1 breadboard
 
-Build and install
-=================
+## Build and install
 
 [Download][releases] the latest Android Things native library release
 and extract it in the project root directory.
@@ -56,11 +53,9 @@ If you prefer to run on the command line, type
 adb shell am start com.example.androidthings.nativepio/.<ModuleActivity>
 ```
 
-Sample Specifics
-================
+## Sample Specifics
 
-Blink
------
+### Blink
 
 ![Schematics for Intel Edison](blink/edison_schematics.png)
 ![Schematics for Raspberry Pi 3](blink/rpi3_schematics.png)
@@ -72,8 +67,7 @@ Blink
 
 Blinks an LED connected to a GPIO pin.
 
-Button
-------
+### Button
 
 ![Schematics for Intel Edison](button/edison_schematics.png)
 ![Schematics for Raspberry Pi 3](button/rpi3_schematics.png)
@@ -86,8 +80,7 @@ Button
 Logs to logcat when a button connected to a GPIO pin is pressed. Make sure you
 use a pull-down or pull-up resistor to avoid fluctuation.
 
-Speaker
--------
+### Speaker
 
 ![Schematics for Intel Edison](speaker/edison_schematics.png)
 ![Schematics for Raspberry Pi 3](speaker/rpi3_schematics.png)
@@ -100,8 +93,7 @@ Speaker
 Plays an annoying alarm sound on the PWM speaker. Stop it by turning off the
 Raspberry Pi.
 
-License
-=======
+## License
 
 Copyright 2016 The Android Open Source Project, Inc.
 
