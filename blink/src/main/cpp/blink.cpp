@@ -44,7 +44,7 @@ void android_main(android_app* app) {
     } else if (systemProperties.getBuildDevice() == "edison") {
         LED_GPIO = "IO13";
     } else if (systemProperties.getBuildDevice() == "imx7d_pico") {
-        LED_GPIO = "GPIO_34";
+        LED_GPIO = "GPIO2_IO02";
     } else {
         LOGE("unsupported device: %s", systemProperties.getBuildDevice().c_str());
         return;
