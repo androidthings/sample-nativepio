@@ -57,7 +57,6 @@ adb shell am start com.example.androidthings.nativepio/.<ModuleActivity>
 
 ### Blink
 
-![Schematics for Intel Edison](blink/edison_schematics.png)
 ![Schematics for Raspberry Pi 3](blink/rpi3_schematics.png)
 
 ```bash
@@ -69,7 +68,6 @@ Blinks an LED connected to a GPIO pin.
 
 ### Button
 
-![Schematics for Intel Edison](button/edison_schematics.png)
 ![Schematics for Raspberry Pi 3](button/rpi3_schematics.png)
 
 ```bash
@@ -82,7 +80,6 @@ use a pull-down or pull-up resistor to avoid fluctuation.
 
 ### Speaker
 
-![Schematics for Intel Edison](speaker/edison_schematics.png)
 ![Schematics for Raspberry Pi 3](speaker/rpi3_schematics.png)
 
 ```bash

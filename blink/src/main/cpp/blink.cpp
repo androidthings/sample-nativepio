@@ -41,8 +41,8 @@ void android_main(android_app* app) {
     const char* LED_GPIO;
     if (systemProperties.getBuildDevice() == "rpi3") {
         LED_GPIO = "BCM6";
-    } else if (systemProperties.getBuildDevice() == "edison") {
-        LED_GPIO = "IO13";
+    } else if (systemProperties.getBuildDevice() == "imx6ul_pico") {
+        LED_GPIO = "GPIO4_IO22";
     } else if (systemProperties.getBuildDevice() == "imx7d_pico") {
         LED_GPIO = "GPIO2_IO02";
     } else {
