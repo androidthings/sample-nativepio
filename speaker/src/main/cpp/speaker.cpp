@@ -65,10 +65,12 @@ void android_main(android_app* app) {
     ASSERT(openResult == 0, "failed to open PWM: %s", SPEAKER_PWM);
     int setDutyCycleResult = APwm_setDutyCycle(pwm, 50.0);
     ASSERT(setDutyCycleResult == 0, "failed to set PWM duty cycle: %s", SPEAKER_PWM);
+    double frequency = NOTE_A4_FREQUENCY;
+    int setFrequencyResult = APwm_setFrequencyHz(pwm, frequency);
+    ASSERT(setFrequencyResult == 0, "failed to set PWM frequency: %s", SPEAKER_PWM);
     int enablePwmResult = APwm_setEnabled(pwm, 1);
     ASSERT(enablePwmResult == 0, "failed to enable PWM: %s", SPEAKER_PWM);
 
-    double frequency = NOTE_A4_FREQUENCY;
     int64_t lastMs = millis();
     while (!app->destroyRequested) {
         android_poll_source* source;
