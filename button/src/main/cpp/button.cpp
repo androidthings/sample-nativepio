@@ -41,8 +41,8 @@ void android_main(android_app* app) {
     const char* BUTTON_GPIO;
     if (systemProperties.getBuildDevice() == "rpi3") {
         BUTTON_GPIO = "BCM21";
-    } else if (systemProperties.getBuildDevice() == "edison") {
-        BUTTON_GPIO = "IO12";
+    } else if (systemProperties.getBuildDevice() == "imx6ul_pico") {
+        BUTTON_GPIO = "GPIO2_IO03";
     } else if (systemProperties.getBuildDevice() == "imx7d_pico") {
         BUTTON_GPIO = "GPIO6_IO14";
     }  else {

@@ -49,8 +49,8 @@ void android_main(android_app* app) {
     const char* SPEAKER_PWM;
     if (systemProperties.getBuildDevice() == "rpi3") {
         SPEAKER_PWM = "PWM1";
-    } else if (systemProperties.getBuildDevice() == "edison") {
-        SPEAKER_PWM = "IO3";
+    } else if (systemProperties.getBuildDevice() == "imx6ul_pico") {
+        SPEAKER_PWM = "PWM8";
     } else if (systemProperties.getBuildDevice() == "imx7d_pico") {
         SPEAKER_PWM = "PWM2";
     } else {
