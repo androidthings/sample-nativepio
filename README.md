@@ -4,6 +4,26 @@ This Android Things app runs basic code that exercises
 the [Native PIO APIs][native-pio] from C++. Each sample is an Android
 module that can be run independently.
 
+## Screenshots
+
+### Blink
+
+![Blink sample demo][demo1-gif]
+
+[(Watch the demo on YouTube)][demo1-yt]
+
+### Button
+
+![Button sample demo][demo2-gif]
+
+[(Watch the demo on YouTube)][demo2-yt]
+
+### Speaker
+
+![Speaker sample demo][demo3-gif]
+
+[(Watch the demo on YouTube)][demo3-yt]
+
 ## Pre-requisites
 
 - Android Things compatible board
@@ -111,3 +131,9 @@ the License.
 
 [native-pio]: https://developer.android.com/things/sdk/pio/native.html
 [releases]: https://github.com/androidthings/native-libandroidthings/releases
+[demo1-yt]: https://www.youtube.com/watch?v=47Rie4JpJ5M&index=7&list=PLWz5rJ2EKKc-GjpNkFe9q3DhE2voJscDT
+[demo1-gif]: demo1.gif
+[demo2-yt]: https://www.youtube.com/watch?v=ocHuWSHY0JA&list=PLWz5rJ2EKKc-GjpNkFe9q3DhE2voJscDT&index=8
+[demo2-gif]: demo2.gif
+[demo3-yt]: https://www.youtube.com/watch?v=xx6eCzG5Tq8&list=PLWz5rJ2EKKc-GjpNkFe9q3DhE2voJscDT&index=9
+[demo3-gif]: demo3.gif
