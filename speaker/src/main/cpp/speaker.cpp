@@ -43,8 +43,6 @@ int64_t millis() {
 }
 
 void android_main(android_app* app) {
-    app_dummy(); // prevent native-app-glue to be stripped.
-
     AndroidSystemProperties systemProperties(app->activity);
     const char* SPEAKER_PWM;
     if (systemProperties.getBuildDevice() == "rpi3") {

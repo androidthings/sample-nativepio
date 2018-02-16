@@ -35,8 +35,6 @@ const int BLINK_INTERVAL_MS = 1000;
 #define ASSERT(cond, ...) if (!(cond)) { __android_log_assert(#cond, TAG, __VA_ARGS__);}
 
 void android_main(android_app* app) {
-    app_dummy(); // prevent native-app-glue to be stripped.
-
     AndroidSystemProperties systemProperties(app->activity);
     const char* LED_GPIO;
     if (systemProperties.getBuildDevice() == "rpi3") {

@@ -50,3 +50,6 @@ target_link_libraries(speaker
                       native-app-glue
                       androidthings
                       android-system-properties)
+# Force export of ANativeActivity_onCreate.
+set(CMAKE_SHARED_LINKER_FLAGS
+    "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
