@@ -1,8 +1,8 @@
-# Simple example of Android Things Native Peripheral I/O APIs
+# Native Peripheral I/O
 
-This Android Things app runs basic code that exercises
-the [Native PIO APIs][native-pio] from C++. Each sample is an Android
-module that can be run independently.
+This Android Things app runs basic code that exercises the
+[Native PIO APIs][native-pio] from C++. Each sample is an Android module that
+can be run independently.
 
 ## Screenshots
 
