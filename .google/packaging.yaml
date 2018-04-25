@@ -1,7 +1,7 @@
 status:       PUBLISHED
 technologies: [Android, IoT]
 categories:   [Android Things]
-languages:    [Java]
+languages:    [C++, Java]
 solutions:    [IoT]
 github:       androidthings/sample-nativepio
 license:      apache2
