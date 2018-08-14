@@ -45,10 +45,9 @@ int64_t millis() {
 void android_main(android_app* app) {
     AndroidSystemProperties systemProperties(app->activity);
     const char* SPEAKER_PWM;
-    if (systemProperties.getBuildDevice() == "rpi3") {
+    if (systemProperties.getBuildDevice() == "rpi3" ||
+        systemProperties.getBuildDevice() == "rpi3bp") {
         SPEAKER_PWM = "PWM1";
-    } else if (systemProperties.getBuildDevice() == "imx6ul_pico") {
-        SPEAKER_PWM = "PWM8";
     } else if (systemProperties.getBuildDevice() == "imx7d_pico") {
         SPEAKER_PWM = "PWM2";
     } else {

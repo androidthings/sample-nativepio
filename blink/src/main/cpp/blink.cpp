@@ -37,10 +37,9 @@ const int BLINK_INTERVAL_MS = 1000;
 void android_main(android_app* app) {
     AndroidSystemProperties systemProperties(app->activity);
     const char* LED_GPIO;
-    if (systemProperties.getBuildDevice() == "rpi3") {
+    if (systemProperties.getBuildDevice() == "rpi3" ||
+        systemProperties.getBuildDevice() == "rpi3bp") {
         LED_GPIO = "BCM6";
-    } else if (systemProperties.getBuildDevice() == "imx6ul_pico") {
-        LED_GPIO = "GPIO4_IO22";
     } else if (systemProperties.getBuildDevice() == "imx7d_pico") {
         LED_GPIO = "GPIO2_IO02";
     } else {

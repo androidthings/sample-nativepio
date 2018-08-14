@@ -37,10 +37,9 @@ const char* TAG = "button";
 void android_main(android_app* app) {
     AndroidSystemProperties systemProperties(app->activity);
     const char* BUTTON_GPIO;
-    if (systemProperties.getBuildDevice() == "rpi3") {
+    if (systemProperties.getBuildDevice() == "rpi3" ||
+        systemProperties.getBuildDevice() == "rpi3bp") {
         BUTTON_GPIO = "BCM21";
-    } else if (systemProperties.getBuildDevice() == "imx6ul_pico") {
-        BUTTON_GPIO = "GPIO2_IO03";
     } else if (systemProperties.getBuildDevice() == "imx7d_pico") {
         BUTTON_GPIO = "GPIO6_IO14";
     }  else {
