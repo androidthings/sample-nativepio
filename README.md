@@ -4,6 +4,10 @@ This Android Things app runs basic code that exercises the
 [Native PIO APIs][native-pio] from C++. Each sample is an Android module that
 can be run independently.
 
+> **Note:** The Android Things Console will be turned down for non-commercial
+> use on January 5, 2022. For more details, see the
+> [FAQ page](https://developer.android.com/things/faq).
+
 ## Screenshots
 
 ### Blink
